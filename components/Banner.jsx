@@ -11,7 +11,7 @@ const Banner = ({}) => {
             </div>
             <div className="col-lg-6 col-md-12 site-title">
               <h3 className="title-text">Hello!</h3>
-              <h1 className="title-text text-uppercase">I`&apos;`m Taufik</h1>
+              <h1 className="title-text text-uppercase">I&apos;m Taufik</h1>
               <h4 className="title-text text-uppercase">Backend Developer</h4>
               <div className="site-buttons">
                 <div className="d-flex flex-row flex-wrap">
