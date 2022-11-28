@@ -1,0 +1,22 @@
+@use "./variables.scss" as v;
+
+.site-main .skills-area {
+  display: flex;
+  justify-items: center;
+  padding: 7rem 2rem;
+}
+.site-main .skills-area .skills-title {
+  padding: 0 20rem;
+}
+.site-main .skills-area .skills-title h1 {
+  font-size: 20px;
+}
+.site-main > .skills-area .mySkill {
+  flex: 1;
+  background: rgba(253, 254, 255, 0.685);
+  width: 80%;
+  transition: box-shadow 0.7s ease;
+}
+.site-main > .skills-area .mySkill:hover {
+  box-shadow: v.$box_shadow;
+}

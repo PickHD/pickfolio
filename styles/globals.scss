@@ -1,0 +1,12 @@
+@use "./variables" as v;
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  font: normal 500 16px/20px v.$nova_font;
+  scroll-behavior: smooth;
+}
