@@ -23,7 +23,7 @@ const About = ({}) => {
                   working as <b>Backend Developer</b>.
                 </p>
                 <p className="para">
-                  I like <b>programming</b> since i`&apos;`m 2th grade of
+                  I like <b>programming</b> since i&apos;m 2th grade of
                   Vocaltional School,but that is not enough for me and now i
                   improve my skill more and more. I usually using{" "}
                   <b> Golang </b> and exploring some back-end things like{" "}
