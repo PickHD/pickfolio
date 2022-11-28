@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const Banner = ({}) => {
   return (
     <>
@@ -5,11 +7,11 @@ const Banner = ({}) => {
         <div className="container">
           <div className="row">
             <div className="col-lg-6 col-md-12 banner-image">
-              <img src="/header-img.png" className="img-fluid" />
+              <Image src="/header-img.png" className="img-fluid" />
             </div>
             <div className="col-lg-6 col-md-12 site-title">
               <h3 className="title-text">Hello!</h3>
-              <h1 className="title-text text-uppercase">I'm Taufik</h1>
+              <h1 className="title-text text-uppercase">I`&apos;`m Taufik</h1>
               <h4 className="title-text text-uppercase">Backend Developer</h4>
               <div className="site-buttons">
                 <div className="d-flex flex-row flex-wrap">
@@ -24,6 +26,7 @@ const Banner = ({}) => {
                   <a
                     target="_blank"
                     href="https://drive.google.com/file/d/1FcB__7O48auNkLg47_Do0PHrYRM1xXZ5/view?usp=sharing"
+                    rel="noreferrer"
                   >
                     <button
                       type="button"
