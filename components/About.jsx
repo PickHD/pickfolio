@@ -15,11 +15,11 @@ const About = ({}) => {
               <div className="paragraph py-4 w-75">
                 <p className="para">
                   Hello! My Name is Taufik Januar Rachman, age {myAge}
-                  <b> Vocaltional Highschool 13 Bandung alumni</b> majoring in
+                  <b> Vocational Highschool 13 Bandung alumni</b> majoring in
                   <b>
                     <i> software engineering</i>
                   </b>
-                  . I Live in Bandung , Jawa Barat Indonesia. Now I`&apos;`m
+                  . I Live in Bandung , West Java Indonesia. Now I&apos;m
                   working as <b>Backend Developer</b>.
                 </p>
                 <p className="para">
@@ -27,14 +27,14 @@ const About = ({}) => {
                   Vocaltional School,but that is not enough for me and now i
                   improve my skill more and more. I usually using{" "}
                   <b> Golang </b> and exploring some back-end things like{" "}
-                  <b>Microservices</b>,<b>RESTFul API`&apos;`s</b> ,{" "}
-                  <b>GraphQL</b>,<b>Database, Git, Docker</b>, etc. Moreover i
-                  like a challenges & learning a new things.
+                  <b>Event Driven</b>,<b>RESTFul API&apos;s</b> , <b>GraphQL</b>
+                  , Authorization/Authentication,<b>SQL/NOSQL, Docker</b>, etc.
+                  Moreover i like a challenges & learning a new things.
                 </p>
               </div>
               <a
                 target="_blank"
-                href="https://drive.google.com/file/d/1FcB__7O48auNkLg47_Do0PHrYRM1xXZ5/view?usp=sharing"
+                href="https://drive.google.com/file/d/1zdHJxoXEBIMBK9Fq6D9UVbBKYxlS04Dz/view?usp=sharing"
                 rel="noreferrer"
               >
                 <button
