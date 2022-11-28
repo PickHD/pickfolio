@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const About = ({}) => {
   const myAge = new Date().getFullYear() - 2002;
 
@@ -17,22 +19,23 @@ const About = ({}) => {
                   <b>
                     <i> software engineering</i>
                   </b>
-                  . I Live in Bandung , Jawa Barat Indonesia. Now I'm working as{" "}
-                  <b>Backend Developer</b>.
+                  . I Live in Bandung , Jawa Barat Indonesia. Now I`&apos;`m
+                  working as <b>Backend Developer</b>.
                 </p>
                 <p className="para">
-                  I like <b>programming</b> since i'm 2th grade of Vocaltional
-                  School,but that is not enough for me and now i improve my
-                  skill more and more. I usually using <b> Golang </b> and
-                  exploring some back-end things like <b>Microservices</b>,
-                  <b>RESTFul API's</b> , <b>GraphQL</b>,
-                  <b>Database, Git, Docker</b>, etc. Moreover i like a
-                  challenges & learning a new things.
+                  I like <b>programming</b> since i`&apos;`m 2th grade of
+                  Vocaltional School,but that is not enough for me and now i
+                  improve my skill more and more. I usually using{" "}
+                  <b> Golang </b> and exploring some back-end things like{" "}
+                  <b>Microservices</b>,<b>RESTFul API`&apos;`s</b> ,{" "}
+                  <b>GraphQL</b>,<b>Database, Git, Docker</b>, etc. Moreover i
+                  like a challenges & learning a new things.
                 </p>
               </div>
               <a
                 target="_blank"
                 href="https://drive.google.com/file/d/1FcB__7O48auNkLg47_Do0PHrYRM1xXZ5/view?usp=sharing"
+                rel="noreferrer"
               >
                 <button
                   type="button"
@@ -44,7 +47,7 @@ const About = ({}) => {
             </div>
             <div className="col-lg-6 col-md-12" data-aos="fade-down">
               <div className="about-image">
-                <img src="/about-me.png" alt="" className="img-fluid" />
+                <Image src="/about-me.png" alt="" className="img-fluid" />
               </div>
             </div>
           </div>

@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const Project = ({}) => {
   return (
     <>
@@ -28,15 +30,17 @@ const Project = ({}) => {
                 <div className="img">
                   <a
                     target="_blank"
+                    rel="noreferrer"
                     href="https://github.com/PickHD?tab=repositories"
                   >
-                    <img src="/git.png" className="img-fluid" alt="git" />
+                    <Image src="/git.png" className="img-fluid" alt="git" />
                   </a>
                 </div>
                 <div className="title py-4">
                   <h5>
                     <a
                       target="_blank"
+                      rel="noreferrer"
                       href="https://github.com/PickHD?tab=repositories"
                     >
                       <span className="text-secondary">

@@ -9,9 +9,16 @@ const Contact = ({}) => {
             </div>
           </div>
           <br />
-          <div className="d-sm-flex justify-content-center" data-aos="fade-down">
+          <div
+            className="d-sm-flex justify-content-center"
+            data-aos="fade-down"
+          >
             <div className="col-lg-12 text-center contact-title">
-              <a target="_blank" href="mailto:taufikjanuar35@gmail.com">
+              <a
+                target="_blank"
+                rel="noreferrer"
+                href="mailto:taufikjanuar35@gmail.com"
+              >
                 <button type="button" className="btn button primary-button">
                   Email:
                   <br />

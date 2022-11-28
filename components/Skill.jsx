@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const Skill = ({}) => {
   return (
     <>
@@ -16,7 +18,7 @@ const Skill = ({}) => {
               <div className="col-lg-6" data-aos="fade-down">
                 <div className="mySkill">
                   <div className="skill-img text-center py-4">
-                    <img
+                    <Image
                       src="/cache.svg"
                       className="img-fluid"
                       alt="Computer"
@@ -32,7 +34,7 @@ const Skill = ({}) => {
               <div className="col-lg-6 " data-aos="fade-down">
                 <div className="mySkill">
                   <div className="skill-img text-center py-4">
-                    <img
+                    <Image
                       src="/database.svg"
                       className="img-fluid"
                       alt="Computer"
@@ -48,7 +50,11 @@ const Skill = ({}) => {
               <div className="col-lg-6 " data-aos="fade-down">
                 <div className="mySkill">
                   <div className="skill-img text-center py-4">
-                    <img src="/api.svg" className="img-fluid" alt="Computer" />
+                    <Image
+                      src="/api.svg"
+                      className="img-fluid"
+                      alt="Computer"
+                    />
                   </div>
                 </div>
                 <div className="card-body">

@@ -13,6 +13,7 @@ const Footer = ({}) => {
               <a
                 target="_blank"
                 href="https://github.com/PickHD"
+                rel="noreferrer"
                 data-aos="fade-down"
               >
                 <i className="fab fa-github"></i>
@@ -20,6 +21,7 @@ const Footer = ({}) => {
               <a
                 target="_blank"
                 href="https://www.linkedin.com/in/taufik-januar-777141193/"
+                rel="noreferrer"
                 data-aos="fade-down"
               >
                 <i className="fab fa-linkedin"></i>
@@ -27,6 +29,7 @@ const Footer = ({}) => {
               <a
                 target="_blank"
                 href="https://www.instagram.com/taufikjanuarr/?hl=id"
+                rel="noreferrer"
                 data-aos="fade-down"
               >
                 <i className="fab fa-instagram"></i>
@@ -34,6 +37,7 @@ const Footer = ({}) => {
               <a
                 target="_blank"
                 href="https://hub.docker.com/u/pickezdocker"
+                rel="noreferrer"
                 data-aos="fade-down"
               >
                 <i className="fab fa-docker"></i>
