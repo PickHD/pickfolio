@@ -28,7 +28,7 @@ const About = ({}) => {
                   improve my skill more and more. I usually using{" "}
                   <b> Golang </b> and exploring some back-end things like{" "}
                   <b>Message Queue Kafka</b>,<b>RESTFul API&apos;s</b> , <b>GraphQL</b>
-                  , RPC, Authorization/Authentication, Microservices, Monolith,<b>SQL/NOSQL, Docker</b>, etc.
+                  ,<b> RPC, Authorization/Authentication, Microservices, Monolith, SQL/NOSQL, Docker</b>, etc.
                   Moreover i like a challenges & learning a new things.
                 </p>
               </div>
