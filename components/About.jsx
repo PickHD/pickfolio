@@ -24,17 +24,17 @@ const About = ({}) => {
                 </p>
                 <p className="para">
                   I like <b>programming</b> since i&apos;m 2th grade of
-                  Vocaltional School,but that is not enough for me and now i
+                  Vocational School,but that is not enough for me and now i
                   improve my skill more and more. I usually using{" "}
                   <b> Golang </b> and exploring some back-end things like{" "}
-                  <b>Event Driven</b>,<b>RESTFul API&apos;s</b> , <b>GraphQL</b>
-                  , Authorization/Authentication,<b>SQL/NOSQL, Docker</b>, etc.
+                  <b>Message Queue Kafka</b>,<b>RESTFul API's&apos;s</b> , <b>GraphQL</b>
+                  , RPC, Authorization/Authentication, Microservices, Monolith,<b>SQL/NOSQL, Docker</b>, etc.
                   Moreover i like a challenges & learning a new things.
                 </p>
               </div>
               <a
                 target="_blank"
-                href="https://drive.google.com/file/d/1zdHJxoXEBIMBK9Fq6D9UVbBKYxlS04Dz/view?usp=sharing"
+                href="https://drive.google.com/file/d/14ZzEnFy_QwBKpqW_ZzcBu5JjKhqz_c9w/view?usp=sharing"
                 rel="noreferrer"
               >
                 <button
