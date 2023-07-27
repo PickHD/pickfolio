@@ -25,7 +25,7 @@ const Banner = ({}) => {
                   </a>
                   <a
                     target="_blank"
-                    href="https://drive.google.com/file/d/1Dw8j3cM7K0Ev5jLHlW0uygNS3N9FR54j/view?usp=sharing"
+                    href="https://drive.google.com/file/d/14P7SOFk-17aYEjR8x267Z4uEamVqD2xR/view?usp=sharing"
                     rel="noreferrer"
                   >
                     <button

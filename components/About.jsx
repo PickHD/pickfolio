@@ -27,14 +27,14 @@ const About = ({}) => {
                   Vocational School,but that is not enough for me and now i
                   improve my skill more and more. I usually using{" "}
                   <b> Golang </b> and exploring some back-end things like{" "}
-                  <b>Message Queue Kafka</b>,<b>RESTFul API&apos;s</b> , <b>GraphQL</b>
+                  <b>Message Queue Kafka/RabbitMQ</b>,<b>RESTFul API&apos;s</b> , <b>GraphQL</b>
                   ,<b> RPC, Authorization/Authentication, Microservices, Monolith, SQL/NOSQL, Docker</b>, etc.
                   Moreover i like a challenges & learning a new things.
                 </p>
               </div>
               <a
                 target="_blank"
-                href="https://drive.google.com/file/d/1Dw8j3cM7K0Ev5jLHlW0uygNS3N9FR54j/view?usp=sharing"
+                href="https://drive.google.com/file/d/14P7SOFk-17aYEjR8x267Z4uEamVqD2xR/view?usp=sharing"
                 rel="noreferrer"
               >
                 <button
