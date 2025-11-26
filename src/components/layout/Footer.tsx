@@ -1,4 +1,4 @@
-const Footer = ({}) => {
+const Footer = () => {
   const timeNow = new Date().getFullYear();
 
   return (
