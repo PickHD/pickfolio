@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-scroll';
 import {
   Github,
@@ -13,6 +13,7 @@ import {
   Terminal,
   ExternalLink,
   ChevronRight,
+  Rocket,
 } from 'lucide-react';
 
 // --- Data Configuration ---
@@ -20,58 +21,130 @@ const LINKS = {
   github: 'https://github.com/PickHD',
   linkedin: 'https://www.linkedin.com/in/taufik-januar-rachman-777141193/',
   instagram: 'https://www.instagram.com/taufikjanuarr',
-  gdrive: '#', // REPLACE THIS with your actual Google Drive Resume Link
-  email: 'mailto:your.email@example.com', // Update this
+  gdrive: 'https://drive.google.com/file/d/1n0z48InPwA0q_US8RHSOKX0I6v7IvDEb/view?usp=sharing',
+  email: 'mailto:taufikjanuar35@gmail.com',
 };
 
 const SKILLS = [
-  { name: 'Backend Architecture', icon: <Server size={20} /> },
+  { name: 'RESTful API, GRPC, GraphQL', icon: <Server size={20} /> },
   { name: 'Golang / Java', icon: <Code size={20} /> },
-  { name: 'Microservices', icon: <Terminal size={20} /> },
-  { name: 'PostgreSQL / Redis', icon: <Database size={20} /> },
-  { name: 'Docker & Kubernetes', icon: <Server size={20} /> },
-  { name: 'System Design', icon: <Code size={20} /> },
+  {
+    name: 'Building Clean / Hexagonal Architechture',
+    icon: <Terminal size={20} />,
+  },
+  { name: 'MySQL, PostgreSQL, Redis, MongoDB', icon: <Database size={20} /> },
+  { name: 'Docker', icon: <Rocket size={20} /> },
 ];
 
 const EXPERIENCE = [
   {
-    role: 'Backend Engineer',
-    company: 'Current Company (or Previous)',
-    period: '202X - Present',
-    description:
-      'Architecting scalable microservices and optimizing database queries for high-traffic environments.',
+    role: 'Backend Engineer (Fulltime)',
+    company: 'PT SEMESTA QUANTUM ETERNITI',
+    period: 'Mar 2025 - Present',
+    description: [
+      'Collaborating with Product Managers, Tech Leads, QA, and Frontend teams on projects.',
+      'Defining API contracts based on Product Requirement Documents (PRD).',
+      'Designing ERD architecture aligned with business requirements.',
+      'Implementing well-structured, maintainable code using Clean Architecture principles.',
+      'Conducting code reviews for Pull Requests from other Backend team members.',
+      'Resolving bugs and issues identified during QA testing.',
+    ],
   },
   {
-    role: 'Software Engineer',
-    company: 'Previous Company',
-    period: '202X - 202X',
-    description:
-      'Developed RESTful APIs and integrated third-party payment gateways ensuring 99.9% uptime.',
+    role: 'Backend Engineer (Fulltime)',
+    company: 'PT ANARGYA APTANA INDONESIA',
+    period: 'Nov 2023 - Jan 2025 (1 Year 3 months)',
+    description: [
+      'Collaborated with clients, DevOps, internal teams, and Frontend developers.',
+      'Implemented robust APIs based on technical requirements.',
+      'Implemented Unit Tests to ensure system stability.',
+      'Resolved bugs and maintained application performance.',
+      'Optimized database query performance for high-load scenarios.',
+      'Designed Entity Relationship Diagrams (ERD) for scalable databases.',
+    ],
+  },
+  {
+    role: 'Backend Developer (Contract)',
+    company: 'PT SAGARA ASIA TEKNOLOGI',
+    period: 'June 2021 - May 2023 (2 Years)',
+    description: [
+      'Collaborated with client teams and Frontend developers on feature delivery.',
+      'Implemented RESTful APIs based on technical specifications.',
+      'Wrote comprehensive API documentation using Swagger 2.0.',
+      'Implemented Unit Tests to ensure code reliability and coverage.',
+      'Architected Entity Relationship Diagrams (ERD) for complex systems.',
+    ],
   },
 ];
 
 const PROJECTS = [
   {
-    title: 'High Performance API',
-    desc: 'A robust API gateway built with Go and gRPC handling concurrent requests efficiently.',
-    tech: ['Go', 'gRPC', 'Docker'],
-    link: LINKS.github,
+    title: 'Singkatin API',
+    desc: `Microservice with clean architecture for Shortener website URL, also bundled with dashboard functional for registered users.`,
+    tech: [
+      'Go',
+      'gRPC',
+      'RESTful API',
+      'RabbitMQ',
+      'Protobuff',
+      'Jaeger',
+      'MongoDB',
+      'Logrus',
+      'Docker Compose',
+      'Docker',
+      'Redis',
+      'Minio',
+    ],
+    link: LINKS.github + '/singkatin-revamp',
   },
   {
-    title: 'E-Commerce Backend',
-    desc: 'Microservice architecture for an e-commerce platform featuring distributed transactions.',
-    tech: ['Java', 'Spring Boot', 'Kafka'],
-    link: LINKS.github,
-  },
-  {
-    title: 'Data Pipeline Tool',
-    desc: 'Automated ETL pipeline using Python to process large datasets for analytics.',
-    tech: ['Python', 'AWS', 'SQL'],
-    link: LINKS.github,
+    title: 'Exam API',
+    desc: 'Monolith With Hexagonal Architechture for exam online students, with admin action upload class, exams, questions, answers using excel',
+    tech: ['Go', 'RESTful API', 'Docker', 'Docker Compose', 'PostgreSQL', 'Excelize', 'Minio'],
+    link: LINKS.github + '/exam-api',
   },
 ];
 
 // --- Components ---
+
+const LoadingScreen = ({ onComplete }) => {
+  const [text, setText] = useState(0);
+
+  useEffect(() => {
+    let current = 0;
+    const interval = setInterval(() => {
+      const increment = Math.floor(Math.random() * 10) + 1;
+      current = Math.min(current + increment, 100);
+      setText(current);
+
+      if (current >= 100) {
+        clearInterval(interval);
+        setTimeout(onComplete, 200);
+      }
+    }, 100);
+
+    return () => clearInterval(interval);
+  }, [onComplete]);
+
+  return (
+    <motion.div
+      className="bg-dark-900 fixed inset-0 z-50 flex flex-col items-center justify-center text-slate-200"
+      initial={{ opacity: 1 }}
+      exit={{ opacity: 0, transition: { duration: 0.8, ease: 'easeInOut' } }}
+    >
+      <div className="mb-4 font-mono text-4xl font-bold text-white">{text}%</div>
+
+      {/* Custom Progress Bar */}
+      <div className="bg-dark-800 border-dark-700 h-2 w-64 overflow-hidden rounded-full border">
+        <motion.div
+          className="bg-primary-600 h-full shadow-[0_0_15px_#2563eb]"
+          initial={{ width: '0%' }}
+          animate={{ width: `${text}%` }}
+        />
+      </div>
+    </motion.div>
+  );
+};
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -87,8 +160,15 @@ const Navbar = () => {
       className={`fixed top-0 z-50 w-full transition-all duration-300 ${scrolled ? 'bg-dark-900/80 border-b border-white/5 shadow-lg backdrop-blur-md' : 'bg-transparent'}`}
     >
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-        <div className="from-primary-400 to-accent cursor-pointer bg-gradient-to-r bg-clip-text text-2xl font-bold text-transparent">
-          TJR.
+        <div className="flex cursor-pointer items-center gap-3">
+          <div className="group relative">
+            <div className="from-primary-400 to-accent absolute -inset-0.5 rounded-full bg-gradient-to-r opacity-75 blur transition duration-200 group-hover:opacity-100"></div>
+            <img
+              src="https://github.com/PickHD.png"
+              alt="TJR Avatar"
+              className="border-dark-900 relative h-10 w-10 rounded-full border-2 object-cover"
+            />
+          </div>
         </div>
         <div className="hidden space-x-8 md:flex">
           {['About', 'Skills', 'Experience', 'Projects'].map((item) => (
@@ -137,8 +217,10 @@ const Hero = () => {
           <h1 className="mb-6 text-5xl font-bold text-white md:text-7xl">Taufik Januar Rachman</h1>
           <h2 className="mb-8 text-2xl font-light text-slate-400 md:text-3xl">Backend Engineer</h2>
           <p className="mx-auto mb-10 max-w-xl text-lg leading-relaxed text-slate-400">
-            Building scalable systems, robust APIs, and efficient database architectures. Passionate
-            about cloud infrastructure and high-performance computing.
+            Innovative individual with proven success evaluating requirements for software
+            development projects to design innovative solutions. Out-of-the-box thinker and problem
+            solver dedicated to improving performance. Works well in teams and consistently delivers
+            to deadlines.
           </p>
 
           <div className="flex justify-center gap-4">
@@ -183,7 +265,7 @@ const Skills = () => {
       <div className="mx-auto max-w-6xl px-6">
         <SectionHeader title="Technical Arsenal" subtitle="SKILLS" />
 
-        <div className="grid grid-cols-2 gap-6 md:grid-cols-3 lg:grid-cols-6">
+        <div className="grid grid-cols-2 gap-5 md:grid-cols-3 lg:grid-cols-5">
           {SKILLS.map((skill, index) => (
             <motion.div
               key={index}
@@ -230,7 +312,14 @@ const Experience = () => {
                 <div className="md:col-span-8">
                   <h3 className="mb-1 text-xl font-bold text-white">{exp.role}</h3>
                   <h4 className="text-primary-400 mb-4 font-medium">{exp.company}</h4>
-                  <p className="text-sm leading-relaxed text-slate-400">{exp.description}</p>
+
+                  <ul className="list-outside list-disc space-y-1 pl-5 text-sm leading-relaxed text-slate-400">
+                    {exp.description.map((descItem, i) => (
+                      <li key={i} className="marker:text-primary-500 pl-1">
+                        {descItem}
+                      </li>
+                    ))}
+                  </ul>
                 </div>
               </div>
             </motion.div>
@@ -332,14 +421,24 @@ const Footer = () => {
 };
 
 function App() {
+  const [isLoading, setIsLoading] = useState(true);
+
   return (
-    <div className="bg-dark-900 selection:bg-primary-500 min-h-screen text-slate-300 selection:text-white">
-      <Navbar />
-      <Hero />
-      <Skills />
-      <Experience />
-      <Projects />
-      <Footer />
+    <div className="bg-dark-900 selection:bg-primary-500 min-h-screen font-sans text-slate-300 selection:text-white">
+      <AnimatePresence mode="wait">
+        {isLoading ? (
+          <LoadingScreen key="loader" onComplete={() => setIsLoading(false)} />
+        ) : (
+          <React.Fragment>
+            <Navbar />
+            <Hero />
+            <Skills />
+            <Experience />
+            <Projects />
+            <Footer />
+          </React.Fragment>
+        )}
+      </AnimatePresence>
     </div>
   );
 }
