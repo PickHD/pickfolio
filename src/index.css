@@ -1,0 +1,33 @@
+/* 1. Import Tailwind (Replaces @tailwind base/components/utilities) */
+@import 'tailwindcss';
+
+/* 2. Link your existing config file (CRITICAL for v4 to see your custom colors) */
+@config '../tailwind.config.js';
+
+/* 3. Global Styles */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    background-color: #0f172a; /* Matches dark-900 */
+  }
+
+  body {
+    /* Now 'font-sans' will be recognized because @import loaded it */
+    @apply font-sans text-slate-300;
+    overflow-x: hidden;
+  }
+}
+
+/* 4. Custom Scrollbar */
+@layer utilities {
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #0f172a;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #2563eb; /* primary-600 */
+    border-radius: 9999px;
+  }
+}
