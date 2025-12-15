@@ -17,7 +17,10 @@ export default {
         accent: '#38bdf8', // Cyan/Sky for pop
       },
       fontFamily: {
-        sans: ['Inter', 'sans-serif'], // Clean, professional
+        fontFamily: {
+          sans: ['Inter', 'sans-serif'],
+          mono: ['JetBrains Mono', 'monospace'],
+        },
       },
     },
   },

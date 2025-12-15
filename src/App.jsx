@@ -80,13 +80,13 @@ const EXPERIENCE = [
 const PROJECTS = [
   {
     title: 'Singkatin API',
-    desc: `Microservice with clean architecture for Shortener website URL, also bundled with dashboard functional for registered users.`,
+    desc: 'Microservice-based URL shortener implementing Clean Architecture. Includes a functional dashboard for registered users to manage links.',
     tech: [
       'Go',
       'gRPC',
       'RESTful API',
       'RabbitMQ',
-      'Protobuff',
+      'Protobuf',
       'Jaeger',
       'MongoDB',
       'Logrus',
@@ -99,7 +99,7 @@ const PROJECTS = [
   },
   {
     title: 'Exam API',
-    desc: 'Monolith With Hexagonal Architechture for exam online students, with admin action upload class, exams, questions, answers using excel',
+    desc: 'Monolithic online exam platform built with Hexagonal Architecture. Features admin capabilities for bulk uploading classes, exams, and questions via Excel.',
     tech: ['Go', 'RESTful API', 'Docker', 'Docker Compose', 'PostgreSQL', 'Excelize', 'Minio'],
     link: LINKS.github + '/exam-api',
   },
@@ -185,12 +185,12 @@ const Navbar = () => {
           ))}
         </div>
         <a
-          href={LINKS.github}
+          href={LINKS.email}
           target="_blank"
           rel="noreferrer"
           className="text-slate-300 transition-colors hover:text-white"
         >
-          <Github size={20} />
+          <Mail size={20} />
         </a>
       </div>
     </nav>
@@ -214,7 +214,9 @@ const Hero = () => {
           transition={{ duration: 0.5 }}
         >
           <span className="text-accent mb-4 block font-medium tracking-wider">HELLO, I'M</span>
-          <h1 className="mb-6 text-5xl font-bold text-white md:text-7xl">Taufik Januar Rachman</h1>
+          <h1 className="mb-6 font-mono text-5xl font-bold tracking-tighter text-white md:text-7xl">
+            Taufik Januar Rachman
+          </h1>
           <h2 className="mb-8 text-2xl font-light text-slate-400 md:text-3xl">Backend Engineer</h2>
           <p className="mx-auto mb-10 max-w-xl text-lg leading-relaxed text-slate-400">
             Innovative individual with proven success evaluating requirements for software
@@ -400,7 +402,6 @@ const Footer = () => {
           { icon: <Github />, link: LINKS.github },
           { icon: <Linkedin />, link: LINKS.linkedin },
           { icon: <Instagram />, link: LINKS.instagram },
-          { icon: <Mail />, link: LINKS.email },
         ].map((social, idx) => (
           <a
             key={idx}
