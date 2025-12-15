@@ -21,7 +21,7 @@ const LINKS = {
   github: 'https://github.com/PickHD',
   linkedin: 'https://www.linkedin.com/in/taufik-januar-rachman-777141193/',
   instagram: 'https://www.instagram.com/taufikjanuarr',
-  gdrive: 'https://drive.google.com/file/d/1n0z48InPwA0q_US8RHSOKX0I6v7IvDEb/view?usp=sharing',
+  gdrive: 'https://drive.google.com/file/d/18WNzE6YdQw2vEfewELCjvB-OGMrBL8tG/view?usp=sharing',
   email: 'mailto:taufikjanuar35@gmail.com',
 };
 
