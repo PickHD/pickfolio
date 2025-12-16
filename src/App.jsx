@@ -157,7 +157,11 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`fixed top-0 z-50 w-full transition-all duration-300 ${scrolled ? 'bg-dark-900/80 border-b border-white/5 shadow-lg backdrop-blur-md' : 'bg-transparent'}`}
+      className={`fixed top-0 z-50 w-full transition-all duration-300 ${
+        scrolled
+          ? 'bg-dark-900/80 border-dark-700 border-b shadow-lg backdrop-blur-md'
+          : 'bg-transparent'
+      }`}
     >
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
         <div className="flex cursor-pointer items-center gap-3">
@@ -201,7 +205,7 @@ const Hero = () => {
   return (
     <section
       id="about"
-      className="relative flex min-h-screen items-center justify-center overflow-hidden pt-20"
+      className="relative flex min-h-screen items-center justify-center overflow-hidden pt-20 outline-none"
     >
       {/* Background Glow Effect */}
       <div className="bg-primary-600/20 absolute top-1/4 left-1/4 h-96 w-96 rounded-full blur-[128px]" />
@@ -210,12 +214,23 @@ const Hero = () => {
       <div className="z-10 mx-auto max-w-4xl px-6 text-center">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
+          whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
           <span className="text-accent mb-4 block font-medium tracking-wider">HELLO, I'M</span>
           <h1 className="mb-6 font-mono text-5xl font-bold tracking-tighter text-white md:text-7xl">
             Taufik Januar Rachman
+            <motion.span
+              animate={{ opacity: [1, 0] }}
+              transition={{
+                duration: 0.5,
+                repeat: Infinity,
+                repeatType: 'reverse',
+              }}
+              className="text-primary-400 ml-1 inline-block"
+            >
+              |
+            </motion.span>
           </h1>
           <h2 className="mb-8 text-2xl font-light text-slate-400 md:text-3xl">Backend Engineer</h2>
           <p className="mx-auto mb-10 max-w-xl text-lg leading-relaxed text-slate-400">
@@ -273,7 +288,7 @@ const Skills = () => {
               key={index}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
+              viewport={{ once: false, amount: 0.1 }}
               transition={{ delay: index * 0.1 }}
               whileHover={{ y: -5 }}
               className="bg-dark-800 border-dark-700 hover:border-primary-500/50 hover:shadow-primary-500/10 group flex flex-col items-center justify-center gap-4 rounded-xl border p-6 transition-all hover:shadow-lg"
@@ -300,9 +315,9 @@ const Experience = () => {
           {EXPERIENCE.map((exp, index) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, x: -20 }}
+              initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
+              viewport={{ once: false, amount: 0.3 }}
               className="relative pl-8 md:pl-0"
             >
               <div className="bg-primary-600 ring-dark-900 absolute top-2 left-[-9px] hidden h-4 w-4 rounded-full ring-4 md:block" />
@@ -345,7 +360,7 @@ const Projects = () => {
               initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}
               whileHover={{ y: -10 }}
-              viewport={{ once: true }}
+              viewport={{ once: false, amount: 0.2 }}
               className="bg-dark-800 border-dark-700 hover:border-primary-500/30 flex flex-col overflow-hidden rounded-2xl border transition-all"
             >
               <div className="flex-1 p-8">
