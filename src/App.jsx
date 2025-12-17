@@ -215,23 +215,28 @@ const Hero = () => {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: false }}
           transition={{ duration: 0.5 }}
         >
           <span className="text-accent mb-4 block font-medium tracking-wider">HELLO, I'M</span>
+
           <h1 className="mb-6 font-mono text-5xl font-bold tracking-tighter text-white md:text-7xl">
             Taufik Januar Rachman
-            <motion.span
-              animate={{ opacity: [1, 0] }}
-              transition={{
-                duration: 0.5,
-                repeat: Infinity,
-                repeatType: 'reverse',
-              }}
-              className="text-primary-400 ml-1 inline-block"
-            >
-              |
-            </motion.span>
+            <span className="whitespace-nowrap">
+              <motion.span
+                animate={{ opacity: [1, 0] }}
+                transition={{
+                  duration: 0.5,
+                  repeat: Infinity,
+                  repeatType: 'reverse',
+                }}
+                className="text-primary-400 ml-1 inline-block"
+              >
+                |
+              </motion.span>
+            </span>
           </h1>
+
           <h2 className="mb-8 text-2xl font-light text-slate-400 md:text-3xl">Backend Engineer</h2>
           <p className="mx-auto mb-10 max-w-xl text-lg leading-relaxed text-slate-400">
             Innovative individual with proven success evaluating requirements for software
