@@ -32,8 +32,8 @@ const SKILLS = [
     name: 'Building Clean / Hexagonal Architechture',
     icon: <Terminal size={20} />,
   },
-  { name: 'MySQL, PostgreSQL, Redis, MongoDB', icon: <Database size={20} /> },
-  { name: 'Docker', icon: <Rocket size={20} /> },
+  { name: 'MySQL, PostgreSQL, Redis, MongoDB, Minio', icon: <Database size={20} /> },
+  { name: 'Docker, NginX, AWS, Linux', icon: <Rocket size={20} /> },
 ];
 
 const EXPERIENCE = [
@@ -96,12 +96,35 @@ const PROJECTS = [
       'Minio',
     ],
     link: LINKS.github + '/singkatin-revamp',
+    status: 'Completed',
   },
   {
     title: 'Exam API',
     desc: 'Monolithic online exam platform built with Hexagonal Architecture. Features admin capabilities for bulk uploading classes, exams, and questions via Excel.',
     tech: ['Go', 'RESTful API', 'Docker', 'Docker Compose', 'PostgreSQL', 'Excelize', 'Minio'],
     link: LINKS.github + '/exam-api',
+    status: 'Completed',
+  },
+  {
+    title: 'HRIS App',
+    desc: 'Fullstack web application HRIS (Human Resources Information System) using ReactJS and Golang',
+    tech: [
+      'Go',
+      'RESTful API',
+      'Docker',
+      'Docker Compose',
+      'MySQL',
+      'Excel',
+      'Pdf',
+      'Minio',
+      'Shadcn-ui',
+      'Reactjs',
+      'Typescript',
+      'Face recognition',
+      'Liveliness detection',
+    ],
+    link: LINKS.github + '/hris-app',
+    status: 'On progress',
   },
 ];
 
@@ -382,7 +405,18 @@ const Projects = () => {
                     <ExternalLink size={20} />
                   </a>
                 </div>
-                <h3 className="mb-3 text-xl font-bold text-white">{project.title}</h3>
+                <div className="mb-3 flex items-center gap-3">
+                  <h3 className="text-xl font-bold text-white">{project.title}</h3>
+                  <span
+                    className={`rounded-full px-3 py-1 text-xs font-medium ${
+                      project.status === 'On progress'
+                        ? 'bg-yellow-900/30 text-yellow-400'
+                        : 'bg-green-900/30 text-green-400'
+                    }`}
+                  >
+                    {project.status}
+                  </span>
+                </div>
                 <p className="mb-6 text-sm leading-relaxed text-slate-400">{project.desc}</p>
                 <div className="mt-auto flex flex-wrap gap-2">
                   {project.tech.map((t) => (
