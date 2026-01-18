@@ -96,7 +96,7 @@ const PROJECTS = [
       'Minio',
     ],
     link: LINKS.github + '/singkatin-revamp',
-    status: 'Completed',
+    status: 'On progress',
   },
   {
     title: 'Exam API',
@@ -123,6 +123,23 @@ const PROJECTS = [
       'Reverse Proxy',
     ],
     link: LINKS.github + '/hris-app',
+    status: 'On progress',
+  },
+  {
+    title: 'Pick Your Go',
+    desc: 'A powerful CLI tool to quickly scaffold production-ready Go projects with various architectural patterns. ',
+    tech: [
+      'CLI',
+      'RESTful API',
+      'Go',
+      'Boilerplate Template',
+      'Cache',
+      'Makefile',
+      'Hexagonal Architechture',
+      'Layered Architechture',
+      'Modular Architechture',
+    ],
+    link: LINKS.github + '/pick-your-go',
     status: 'Completed',
   },
 ];
