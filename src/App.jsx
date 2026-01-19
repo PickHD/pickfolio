@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion as Motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-scroll';
 import {
   Github,
@@ -130,7 +130,6 @@ const PROJECTS = [
     desc: 'A powerful CLI tool to quickly scaffold production-ready Go projects with various architectural patterns. ',
     tech: [
       'CLI',
-      'RESTful API',
       'Go',
       'Boilerplate Template',
       'Cache',
@@ -141,6 +140,13 @@ const PROJECTS = [
     ],
     link: LINKS.github + '/pick-your-go',
     status: 'Completed',
+  },
+  {
+    title: 'Nempo Track API',
+    desc: 'A High-Performance Asset Dependency Tracker using Spring Boot, GraphQL, and Neo4j.',
+    tech: ['Java', 'Springboot', 'GraphQL', 'Neo4j', 'Asset Tracking'],
+    link: LINKS.github + '/nempo-track-api',
+    status: 'On progress',
   },
 ];
 
@@ -166,7 +172,7 @@ const LoadingScreen = ({ onComplete }) => {
   }, [onComplete]);
 
   return (
-    <motion.div
+    <Motion.div
       className="bg-dark-900 fixed inset-0 z-50 flex flex-col items-center justify-center text-slate-200"
       initial={{ opacity: 1 }}
       exit={{ opacity: 0, transition: { duration: 0.8, ease: 'easeInOut' } }}
@@ -175,13 +181,13 @@ const LoadingScreen = ({ onComplete }) => {
 
       {/* Custom Progress Bar */}
       <div className="bg-dark-800 border-dark-700 h-2 w-64 overflow-hidden rounded-full border">
-        <motion.div
+        <Motion.div
           className="bg-primary-600 h-full shadow-[0_0_15px_#2563eb]"
           initial={{ width: '0%' }}
           animate={{ width: `${text}%` }}
         />
       </div>
-    </motion.div>
+    </Motion.div>
   );
 };
 
@@ -251,7 +257,7 @@ const Hero = () => {
       <div className="bg-accent/10 absolute right-1/4 bottom-1/4 h-96 w-96 rounded-full blur-[128px]" />
 
       <div className="z-10 mx-auto max-w-4xl px-6 text-center">
-        <motion.div
+        <Motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: false }}
@@ -262,7 +268,7 @@ const Hero = () => {
           <h1 className="mb-6 font-mono text-5xl font-bold tracking-tighter text-white md:text-7xl">
             Taufik Januar Rachman
             <span className="whitespace-nowrap">
-              <motion.span
+              <Motion.span
                 animate={{ opacity: [1, 0] }}
                 transition={{
                   duration: 0.5,
@@ -272,7 +278,7 @@ const Hero = () => {
                 className="text-primary-400 ml-1 inline-block"
               >
                 |
-              </motion.span>
+              </Motion.span>
             </span>
           </h1>
 
@@ -285,7 +291,7 @@ const Hero = () => {
           </p>
 
           <div className="flex justify-center gap-4">
-            <motion.a
+            <Motion.a
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               href={LINKS.gdrive}
@@ -294,8 +300,8 @@ const Hero = () => {
               className="bg-primary-600 hover:bg-primary-500 shadow-primary-600/20 flex items-center gap-2 rounded-full px-8 py-3 font-semibold text-white shadow-lg transition-all"
             >
               <Download size={18} /> Resume
-            </motion.a>
-            <motion.a
+            </Motion.a>
+            <Motion.a
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               href={LINKS.linkedin}
@@ -304,9 +310,9 @@ const Hero = () => {
               className="bg-dark-800 hover:bg-dark-700 border-dark-700 rounded-full border px-8 py-3 font-semibold text-white transition-all"
             >
               Let's Connect
-            </motion.a>
+            </Motion.a>
           </div>
-        </motion.div>
+        </Motion.div>
       </div>
     </section>
   );
@@ -328,7 +334,7 @@ const Skills = () => {
 
         <div className="grid grid-cols-2 gap-5 md:grid-cols-3 lg:grid-cols-5">
           {SKILLS.map((skill, index) => (
-            <motion.div
+            <Motion.div
               key={index}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -341,7 +347,7 @@ const Skills = () => {
                 {skill.icon}
               </div>
               <span className="text-center text-sm font-medium text-slate-200">{skill.name}</span>
-            </motion.div>
+            </Motion.div>
           ))}
         </div>
       </div>
@@ -357,7 +363,7 @@ const Experience = () => {
 
         <div className="border-dark-700 relative ml-3 space-y-12 border-l pl-8 md:ml-0 md:pl-0">
           {EXPERIENCE.map((exp, index) => (
-            <motion.div
+            <Motion.div
               key={index}
               initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -383,7 +389,7 @@ const Experience = () => {
                   </ul>
                 </div>
               </div>
-            </motion.div>
+            </Motion.div>
           ))}
         </div>
       </div>
@@ -399,7 +405,7 @@ const Projects = () => {
 
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           {PROJECTS.map((project, index) => (
-            <motion.div
+            <Motion.div
               key={index}
               initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}
@@ -445,7 +451,7 @@ const Projects = () => {
                   ))}
                 </div>
               </div>
-            </motion.div>
+            </Motion.div>
           ))}
         </div>
 
