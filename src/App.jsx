@@ -146,7 +146,7 @@ const PROJECTS = [
     desc: 'A High-Performance Asset Dependency Tracker using Spring Boot, GraphQL, and Neo4j.',
     tech: ['Java', 'Springboot', 'GraphQL', 'Neo4j', 'Asset Tracking'],
     link: LINKS.github + '/nempo-track-api',
-    status: 'On progress',
+    status: 'Completed',
   },
 ];
 
