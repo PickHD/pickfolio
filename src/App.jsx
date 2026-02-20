@@ -106,8 +106,8 @@ const PROJECTS = [
     status: 'Completed',
   },
   {
-    title: 'HRIS App',
-    desc: 'Fullstack web application HRIS (Human Resources Information System) using ReactJS and Golang',
+    title: 'BaseKarya',
+    desc: 'BaseKarya - Fullstack web application HRIS (Human Resources Information System) using ReactJS and Golang ',
     tech: [
       'Go',
       'RESTful API',
@@ -118,11 +118,13 @@ const PROJECTS = [
       'Minio',
       'Shadcn-ui',
       'Reactjs',
+      'Websocket',
+      'Pdf-generation',
       'Typescript',
       'Nginx',
       'Reverse Proxy',
     ],
-    link: LINKS.github + '/hris-app',
+    link: LINKS.github + '/basekarya',
     status: 'On progress',
   },
   {
