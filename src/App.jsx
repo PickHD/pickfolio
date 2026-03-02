@@ -95,7 +95,7 @@ const PROJECTS = [
       'Redis',
       'Minio',
     ],
-    link: LINKS.github + '/singkatin-revamp',
+    link: LINKS.github + '/singkatin-api',
     status: 'On progress',
   },
   {
