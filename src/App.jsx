@@ -19,7 +19,7 @@ import {
 // --- Data Configuration ---
 const LINKS = {
   github: 'https://github.com/PickHD',
-  linkedin: 'https://www.linkedin.com/in/taufik-januar-rachman-777141193/',
+  linkedin: 'https://www.linkedin.com/in/taufik-januar-rachman',
   instagram: 'https://www.instagram.com/taufikjanuarr',
   gdrive: 'https://drive.google.com/file/d/18WNzE6YdQw2vEfewELCjvB-OGMrBL8tG/view?usp=sharing',
   email: 'mailto:taufikjanuar35@gmail.com',
@@ -96,7 +96,7 @@ const PROJECTS = [
       'Minio',
     ],
     link: LINKS.github + '/singkatin-api',
-    status: 'On progress',
+    status: 'Completed',
   },
   {
     title: 'Exam API',
@@ -107,7 +107,7 @@ const PROJECTS = [
   },
   {
     title: 'BaseKarya',
-    desc: 'BaseKarya - Fullstack web application HRIS (Human Resources Information System) using ReactJS and Golang ',
+    desc: 'BaseKarya - Web application HRIS (Human Resources Information System) using ReactJS and Golang ',
     tech: [
       'Go',
       'RESTful API',
